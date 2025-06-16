@@ -4,6 +4,19 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Your Bemnchmark Results</title>
+    <link rel="stylesheet" href="./assets/css/Reset-style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./assets/css/result-style.css" />
     <link
       rel="shortcut icon"
@@ -20,7 +33,7 @@
       />
     </header>
     <main>
-      <div>
+      <div id="result-text">
         <h1>Results</h1>
         <h3>The summary of your answers:</h3>
       </div>
@@ -32,13 +45,19 @@
           promotions / spam folder )
         </p>
       </div>
+      <aside id="ok">
+        <div>
+          <h2>Correct</h2>
+          <h3 id="correct">67.7%</h3>
+        </div>
+      </aside>
+      <aside id="ko">
+        <div>
+          <h2>Wrong</h2>
+          <h3 id="wrong">33.3%</h3>
+        </div>
+      </aside>
     </main>
-    <aside>
-      <div><h2>Correct</h2></div>
-    </aside>
-    <aside>
-      <div><h2>Wrong</h2></div>
-    </aside>
     <footer>
       <button><a href="">RATE US</a></button>
     </footer>
