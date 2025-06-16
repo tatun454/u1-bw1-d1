@@ -22,6 +22,8 @@ p {
 ul {
   padding-left: 1.2em;
   margin-top: 3em;
+  list-style: disc;
+  padding-left: 1.5em;
 }
 li {
   margin-top: 5px;
@@ -34,7 +36,7 @@ span {
 /* header */
 header img {
   width: 7em;
-  margin: 1em 0 2em 0;
+  margin: 2em 0;
 }
 h1 {
   margin-top: 0;
@@ -50,7 +52,7 @@ h3 {
   color: #c2128d;
   font-size: 2em;
   font-weight: 700;
-  margin-bottom: 0;
+  margin: 20px 0 10px;
 }
 
 /* form */
@@ -64,11 +66,19 @@ label {
 }
 
 button {
-  margin-left: 8em;
+  margin-left: 9em;
   color: black;
   background-color: #00ffff;
   text-transform: uppercase;
-  padding: 10px 37px;
+  padding: 11px 37px;
   font-weight: bold;
   border: none;
+}
+#check {
+  appearance: none;
+  width: 10px;
+  height: 10px;
+  border: solid 2px white;
+  position: relative;
+  cursor: pointer;
 }
