@@ -1,0 +1,41 @@
+* {
+  box-sizing: border-box;
+}
+/* generics */
+body {
+  background-image: url(../imgs/bg.jpg);
+  color: white;
+  font-family: "inter", "sans-serif";
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.centrale {
+  font-size: 11px;
+  font-weight: 200;
+}
+ul {
+  padding-left: 1em;
+}
+
+/* header */
+header img {
+  width: 7em;
+  margin: 1em 0 2em 0;
+}
+
+/* main */
+h1 {
+  font-family: "Outfit", sans-serif;
+  font-size: 3em;
+}
+.welcome-to {
+  font-weight: 300;
+}
+h3 {
+  color: #c2128d;
+  font-size: 2em;
+  font-weight: 700;
+  margin-bottom: 0;
+}
