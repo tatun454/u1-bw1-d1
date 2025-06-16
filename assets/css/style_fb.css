@@ -9,7 +9,7 @@ span{
     font-size: 4rem;
 }
 
-.star:hover{
+.star.active{
     color:#02FEFF;
     font-size: 4rem;
 }
