@@ -4,19 +4,31 @@
 /* generics */
 body {
   background-image: url(../imgs/bg.jpg);
-  color: white;
+
   font-family: "inter", "sans-serif";
-  width: 70%;
-  margin-left: auto;
-  margin-right: auto;
+  width: 60%;
+  margin: 0 auto;
 }
 
 .centrale {
+  margin-top: 3px;
   font-size: 11px;
-  font-weight: 200;
+  font-weight: 500;
+  color: #beb6cc;
+}
+p {
+  margin-top: 2.5px;
 }
 ul {
-  padding-left: 1em;
+  padding-left: 1.2em;
+  margin-top: 3em;
+}
+li {
+  margin-top: 5px;
+}
+span {
+  font-weight: bold;
+  color: #f2eef4;
 }
 
 /* header */
@@ -24,18 +36,39 @@ header img {
   width: 7em;
   margin: 1em 0 2em 0;
 }
-
-/* main */
 h1 {
+  margin-top: 0;
   font-family: "Outfit", sans-serif;
   font-size: 3em;
+  color: #e7e7eb;
 }
 .welcome-to {
   font-weight: 300;
 }
 h3 {
+  font-family: "Outfit", sans-serif;
   color: #c2128d;
   font-size: 2em;
   font-weight: 700;
   margin-bottom: 0;
+}
+
+/* form */
+.form {
+  margin: 4em 0;
+}
+label {
+  font-size: 11px;
+  font-weight: 500;
+  color: #f9f8fa;
+}
+
+button {
+  margin-left: 8em;
+  color: black;
+  background-color: #00ffff;
+  text-transform: uppercase;
+  padding: 10px 37px;
+  font-weight: bold;
+  border: none;
 }
