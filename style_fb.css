@@ -1,0 +1,15 @@
+body{
+    text-align: center;
+}
+
+span{
+    justify-content: center;
+    display: flex;
+    color:#0C1139;
+    font-size: 4rem;
+}
+
+.star:hover{
+    color:#02FEFF;
+    font-size: 4rem;
+}
