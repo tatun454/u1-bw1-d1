@@ -28,7 +28,8 @@ main {
      display: grid;
       grid-template-columns: repeat(2, 1fr); /* 2 colonne uguali */
       gap: 20px;
-      max-width: 600px;
+    
+
       margin: 0 auto; /* centra il contenitore */
       padding: 20px;
 }
@@ -42,10 +43,11 @@ main {
 .answer {
     
     font-size: 2.5em;
-    border-radius: 35px;
+    border-radius: 50px;
     border: 5px solid hsl(298.5deg 27.03% 70.98%);
     cursor: pointer;
-    font-family: "inter", sans-serif
+    font-family: "inter", sans-serif;
+    padding: 20px;
 }
 
 
@@ -86,17 +88,16 @@ main label {
 
 
 .end-button {
-    background-color:hsl(180deg 100% 50%);
-    color: aliceblue;
-    font-size: 1.5em;
-    margin-top: 5em;
-    color: hsl(315.64deg 98.95% 37.25%);
-    display: inline-block;
-    width: 5em;
-    height: 1.5em;
-    text-align: center;
-    border-radius: 35px;
-    text-decoration: none;
+  
+  color: #0b113b;
+  background-color: #00ffff;
+  text-transform: uppercase;
+  padding: 11px 37px;
+  font-weight: 800;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 0 6px #00ffff, 0 0 1px #00ffff, 0 0 15px #00ffff;
+  font-family: "Outfit", sans-serif;
 }
 
 #counter {
