@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome page</title>
+    <link rel="icon" href="assets/imgs/logo-epicode.jpg" />
+
+    <!-- font inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- font outfit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- style -->
+    <link rel="stylesheet" href="assets/css/reset.css" />
+    <link rel="stylesheet" href="assets/css/welcome.css" />
+  </head>
+  <body>
+    <header>
+      <img src="assets/imgs/epicode_logo.png" alt="logo epicode" />
+    </header>
+    <main>
+      <div class="title">
+        <!-- <h1> -->
+        <span class="welcome-to">Welcome to</span>
+        <span>your exam</span>
+        <!-- </h1> -->
+      </div>
+      <div class="centrale">
+        <h3>Intructions</h3>
+        <p>
+          We don't expect most engineers to know the answers to all of these<br />
+          questions, so don't worry if you're unsure of a few of them.
+        </p>
+        <ul>
+          <li>
+            Each question is <span>timed</span> and can only be
+            <span>answered once.</span>
+          </li>
+          <li>
+            Changing browser tab or opening other windows will
+            <span>invalidate the question.</span>
+          </li>
+          <li>This exam will take approx. <span>0-5 minutes.</span></li>
+        </ul>
+      </div>
+      <form>
+        <div class="form">
+          <input type="checkbox" id="check" name="proceed" value="checkbox" />
+          <label for="check"
+            >I promise to answer myself without help from anyone</label
+          >
+          <button>proceed</button>
+        </div>
+      </form>
+    </main>
+    <script src="js/welcome.js"></script>
+  </body>
+</html>
