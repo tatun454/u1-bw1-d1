@@ -4,7 +4,7 @@ const bottone = document.getElementById("procedi");
 bottone.addEventListener("click", function (e) {
   e.preventDefault();
   if (checkbox.checked) {
-    window.location.href = "review.html";
+    window.location.href = "2exam.html";
   } else {
     alert("Spunta la casella!");
   }
