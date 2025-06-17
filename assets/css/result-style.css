@@ -6,8 +6,6 @@ body {
   color: whitesmoke;
 }
 p {
-  margin-top: 9em;
-  text-align: center;
   color: rgb(180, 180, 180);
 }
 .epic-logo {
@@ -28,6 +26,10 @@ p {
   font-size: 30px;
   font-weight: 250;
   margin-top: 10px;
+}
+#certificate {
+  margin-top: 9em;
+  text-align: center;
 }
 #ok h2 {
   font-family: "Outfit", sans-serif;
@@ -71,6 +73,21 @@ p {
   margin-top: 7px;
   margin-right: 80px;
   font-weight: 600;
+}
+
+#ok p {
+  position: absolute;
+  margin-top: 1em;
+  margin-left: 2.7em;
+  font-size: 30px;
+  font-weight: 200;
+  color: whitesmoke;
+}
+#ko p {
+  text-align: right;
+  margin-right: 2.7em;
+  font-size: 30px;
+  color: whitesmoke;
 }
 
 footer button {
