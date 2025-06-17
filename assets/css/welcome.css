@@ -69,6 +69,7 @@ label {
   color: #f9f8fa;
   position: absolute;
   margin-top: 10px;
+  cursor: pointer;
 }
 
 button {
@@ -91,13 +92,14 @@ input[type="checkbox"] {
   position: relative;
   cursor: pointer;
   background-color: transparent;
+  display: inline-block;
 }
 
-.spunta {
-  width: 13px;
-  height: 13px;
-  border: solid 2px white;
-  position: relative;
-  cursor: pointer;
-  background-color: transparent;
+#check:checked::after {
+  content: "✔";
+  position: absolute;
+  top: -1px;
+  font-size: 15px;
+  color: #f9f8fa;
+  line-height: 12px;
 }
