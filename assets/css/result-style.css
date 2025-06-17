@@ -1,0 +1,113 @@
+body {
+  background-image: url(/assets/imgs/bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: whitesmoke;
+}
+p {
+  color: rgb(180, 180, 180);
+}
+.epic-logo {
+  width: 180px;
+  margin-top: 2em;
+  margin-left: 3em;
+}
+#result-text h1 {
+  font-family: "Outfit", sans-serif;
+  text-align: center;
+  font-size: 60px;
+  font-weight: 600;
+  margin-top: 2em;
+}
+#result-text h3 {
+  font-family: "Outfit", sans-serif;
+  text-align: center;
+  font-size: 30px;
+  font-weight: 250;
+  margin-top: 10px;
+}
+#certificate {
+  margin-top: 9em;
+  text-align: center;
+}
+#ok h2 {
+  font-family: "Outfit", sans-serif;
+  display: block;
+  text-align: left;
+  font-size: 60px;
+  width: 100px;
+  position: fixed;
+  margin-top: -90px;
+  margin-left: 80px;
+  font-weight: 300;
+}
+#ok h3 {
+  font-family: "Outfit", sans-serif;
+  display: block;
+  text-align: left;
+  font-size: 60px;
+  width: 100px;
+  position: fixed;
+  margin-top: -30px;
+  margin-left: 80px;
+  font-weight: 600;
+}
+#ko h2 {
+  font-family: "Outfit", sans-serif;
+  display: block;
+  text-align: right;
+  font-size: 60px;
+  position: relative;
+  margin-top: -90px;
+  margin-right: 80px;
+  font-weight: 300;
+}
+
+#ko h3 {
+  font-family: "Outfit", sans-serif;
+  display: block;
+  text-align: right;
+  font-size: 60px;
+  position: relative;
+  margin-top: 7px;
+  margin-right: 80px;
+  font-weight: 600;
+}
+
+#ok p {
+  position: absolute;
+  margin-top: 1em;
+  margin-left: 2.7em;
+  font-size: 30px;
+  font-weight: 200;
+  color: whitesmoke;
+}
+#ko p {
+  text-align: right;
+  margin-right: 2.7em;
+  font-size: 30px;
+  color: whitesmoke;
+}
+
+footer button {
+  display: block;
+  margin-top: 12em;
+  margin-left: auto;
+  margin-right: auto;
+  border: solid 2px whitesmoke;
+  background-color: transparent;
+  width: 260px;
+  height: 70px;
+  font-weight: 500;
+  cursor: pointer;
+}
+footer button a {
+  color: whitesmoke;
+  font-family: "Outfit", sans-serif;
+  text-decoration: none;
+  font-size: 2em;
+}
+footer button:hover {
+  border: solid 2px #00ffff;
+}
