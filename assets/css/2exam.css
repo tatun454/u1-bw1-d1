@@ -11,18 +11,10 @@ body {
 
 main {
     text-align: center;
-    margin-top: 10em;
-}
-
-
-.answer {
     
-    font-size: 2.5em;
-    border-radius: 35px;
-    border: 5px solid hsl(298.5deg 27.03% 70.98%);
-    cursor: pointer;
-  
 }
+
+
 
 .answerContainer {
      display: grid;
@@ -44,10 +36,25 @@ main {
     
     font-size: 2.5em;
     border-radius: 50px;
-    border: 5px solid hsl(298.5deg 27.03% 70.98%);
+    border:3px solid rgba(255, 255, 255, 0.4);
     cursor: pointer;
     font-family: "inter", sans-serif;
     padding: 20px;
+
+
+   
+	box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+	
+	
+	
+
+	font-size:17px;
+	padding:19px 47px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px grey;
+    
+
+
 }
 
 
@@ -61,21 +68,19 @@ main {
 
 
 #nextBtn {
-    width: 10em;
-    height: 3em;
-    border-radius: 10px;
-    background-color:hsl(180deg 100% 50%);
-    color: aliceblue;
-    font-size: 1em;
-    margin-top: 5em
-   
-
+color: #0b113b;
+  background-color: #00ffff;
+  text-transform: uppercase;
+  padding: 11px 37px;
+  font-weight: 800;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 0 6px #00ffff, 0 0 1px #00ffff, 0 0 15px #00ffff;
+  font-family: "Outfit", sans-serif;
+margin-top: 4em;
 }
 
-.question {
-    margin-top: 10em;
-    
-}
+
 
 main h2 {
     color: aliceblue;
