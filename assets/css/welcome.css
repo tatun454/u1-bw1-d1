@@ -39,13 +39,17 @@ header img {
   margin: 2em 0;
 }
 .title {
-  margin-top: 0;
+  margin-top: 10px;
   font-family: "Outfit", sans-serif;
   font-size: 3.5em;
   color: #e7e7eb;
 }
 .welcome-to {
   font-weight: 300;
+}
+.span2 {
+  display: block;
+  margin-top: -15px;
 }
 h3 {
   font-family: "Outfit", sans-serif;
@@ -64,7 +68,8 @@ label {
   font-weight: 500;
   color: #f9f8fa;
   position: absolute;
-  margin-top: 11px;
+  margin-top: 10px;
+  cursor: pointer;
 }
 
 button {
@@ -79,13 +84,22 @@ button {
   box-shadow: 0 0 6px #00ffff, 0 0 1px #00ffff, 0 0 15px #00ffff;
   font-family: "Outfit", sans-serif;
 }
-#check {
+input[type="checkbox"] {
   appearance: none;
   width: 13px;
   height: 13px;
   border: solid 2px white;
   position: relative;
   cursor: pointer;
+  background-color: transparent;
+  display: inline-block;
 }
-#check:checked {
+
+#check:checked::after {
+  content: "✔";
+  position: absolute;
+  top: -1px;
+  font-size: 15px;
+  color: #f9f8fa;
+  line-height: 12px;
 }
