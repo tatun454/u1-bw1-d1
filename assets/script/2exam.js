@@ -1,5 +1,5 @@
 const questionsData = [
-  ["Domanda 1", ["risposta 1", "risposta 2", "risposta 3", "risposta 4"]],
+  ["Domanda 1", ["risposta 0", "risposta 1", "risposta 2", "risposta 3"]],
   ["Domanda 2", ["risposta 4", "risposta 5", "risposta 6", "risposta 7"]],
   ["Domanda 3", ["risposta 8", "risposta 9", "risposta 10", "risposta 11"]],
   ["Domanda 4", ["risposta 12", "risposta 13", "risposta 14", "risposta 15"]],
@@ -14,6 +14,9 @@ const questionsData = [
 let currentQuestionIndex = 0;
 let timer;
 let timeLeft = 60; // secondi
+let checkedAnswer;
+let score = 0;
+
 const timerDisplay = document.getElementById("timer");
 
 const quizContainer = document.getElementById("quiz");
@@ -42,6 +45,7 @@ function startTimer() {
 
 // funzione per passare alla prossima domanda
 function goToNextQuestion() {
+  checkedAnswer = null;
   currentQuestionIndex++;
   clearInterval(timer); // Ferma il timer corrente
 
@@ -62,6 +66,22 @@ function goToNextQuestion() {
   }
 }
  
+function RandomizeAnswers(text){
+  let aux;
+
+  text.forEach((t, index) =>
+    {
+      let index2 = 0;
+      aux = t;
+      index2 =  Math.floor(Math.random() * 4);
+      text[index] = text[index2];
+      text[index2] = aux;
+    }
+  );
+
+  return text;
+}
+
 function renderQuestion(index) {
   // crea una nuova domanda
   quizContainer.innerHTML = ""; // svuota il contenuto precedente
@@ -77,7 +97,9 @@ function renderQuestion(index) {
   const answerContainer = document.createElement("div");
   answerContainer.className = "answerContainer"; // crea contenitore per risposte
 
-  answers.forEach((text) => {
+  let randText = RandomizeAnswers(Array.from(answers));
+
+  randText.forEach((text) => {
     const label = document.createElement("label"); // creo un label per ogni elemento con classe answer
     label.className = "answer";
 
@@ -110,10 +132,11 @@ function renderQuestion(index) {
       }
 
       // Abilita il pulsante "Avanti" se almeno una è selezionata
-      const anyChecked = answerContainer.querySelector(
+      checkedAnswer = answerContainer.querySelector(
         "input[type='checkbox']:checked"
       );
-      nextBtn.disabled = !anyChecked;
+      nextBtn.disabled = !checkedAnswer;
+      
     });
   });
 
@@ -126,6 +149,13 @@ function renderQuestion(index) {
   startTimer(); // avvia il timer per questa domanda
 }
 
-nextBtn.addEventListener("click", goToNextQuestion);
+nextBtn.addEventListener("click", () =>{
+  console.log(questionsData[currentQuestionIndex][1][0]);
+  if(checkedAnswer.closest(".answer").children[1].textContent == questionsData[currentQuestionIndex][1][0]){
+    ++score;
+  }
+  console.log(score)
+  goToNextQuestion();
+});
 
 renderQuestion(currentQuestionIndex); // quando carica la pagina mostra la prima domanda
