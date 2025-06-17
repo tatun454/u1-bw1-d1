@@ -46,8 +46,7 @@ span{
     font-size: 4rem;
     margin-top:0.1em;
     margin-bottom: 1em;
-body {
-  text-align: center;
+
 }
 
 span {
@@ -60,10 +59,6 @@ span {
 .star.active {
   color: #02feff;
   font-size: 4rem;
-.star.active{
-    color:#02FEFF;
-    font-size: 4rem;
-
 }
 
 
