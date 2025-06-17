@@ -4,7 +4,10 @@
 /* generics */
 body {
   background-image: url(../imgs/bg.jpg);
-
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
   font-family: "inter", "sans-serif";
   width: 60%;
   margin: 0 auto;
@@ -73,6 +76,7 @@ label {
 }
 
 button {
+  /* display: none; */
   margin-left: 30em;
   color: #0b113b;
   background-color: #00ffff;

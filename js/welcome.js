@@ -9,3 +9,13 @@ bottone.addEventListener("click", function (e) {
     alert("Spunta la casella!");
   }
 });
+// const checkbox = document.getElementById("check");
+// const bottone = document.getElementById("procedi");
+
+// checkbox.addEventListener("change", function () {
+//   if (checkbox.checked) {
+//     bottone.style.display = "inline-block";
+//   } else {
+//     bottone.style.display = "none";
+//   }
+// });
