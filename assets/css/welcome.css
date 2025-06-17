@@ -4,7 +4,9 @@
 /* generics */
 body {
   background-image: url(../imgs/bg.jpg);
-
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #0b113b;
   font-family: "inter", "sans-serif";
   width: 60%;
   margin: 0 auto;
