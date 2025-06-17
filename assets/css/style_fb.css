@@ -1,15 +1,15 @@
-body{
-    text-align: center;
+body {
+  text-align: center;
 }
 
-span{
-    justify-content: center;
-    display: flex;
-    color:#0C1139;
-    font-size: 4rem;
+span {
+  justify-content: center;
+  display: flex;
+  color: #0c1139;
+  font-size: 4rem;
 }
 
-.star.active{
-    color:#02FEFF;
-    font-size: 4rem;
+.star.active {
+  color: #02feff;
+  font-size: 4rem;
 }
