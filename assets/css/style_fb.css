@@ -46,8 +46,20 @@ span{
     font-size: 4rem;
     margin-top:0.1em;
     margin-bottom: 1em;
+body {
+  text-align: center;
 }
 
+span {
+  justify-content: center;
+  display: flex;
+  color: #0c1139;
+  font-size: 4rem;
+}
+
+.star.active {
+  color: #02feff;
+  font-size: 4rem;
 .star.active{
     color:#02FEFF;
     font-size: 4rem;
