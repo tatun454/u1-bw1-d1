@@ -31,15 +31,30 @@ p {
   margin-top: 9em;
   text-align: center;
 }
+.percentuali {
+  position: relative;
+  margin-right: 12em;
+  margin-left: 12em;
+}
+#ok {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+#ko {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
 #ok h2 {
   font-family: "Outfit", sans-serif;
   display: block;
   text-align: left;
   font-size: 60px;
   width: 100px;
-  position: fixed;
-  margin-top: -90px;
-  margin-left: 80px;
+
+  /* margin-top: -90px; */
+  /* margin-left: 80px; */
   font-weight: 300;
 }
 #ok h3 {
@@ -48,9 +63,8 @@ p {
   text-align: left;
   font-size: 60px;
   width: 100px;
-  position: fixed;
-  margin-top: -30px;
-  margin-left: 80px;
+  /* margin-top: 6px; */
+  /* margin-left: 80px; */
   font-weight: 600;
 }
 #ko h2 {
@@ -58,9 +72,9 @@ p {
   display: block;
   text-align: right;
   font-size: 60px;
-  position: relative;
-  margin-top: -90px;
-  margin-right: 80px;
+  /* position: relative; */
+  /* margin-top: -118px; */
+  /* margin-right: 80px; */
   font-weight: 300;
 }
 
@@ -69,27 +83,34 @@ p {
   display: block;
   text-align: right;
   font-size: 60px;
-  position: relative;
-  margin-top: 7px;
-  margin-right: 80px;
+  /* position: relative; */
+  /* margin-top: 7px; */
+  /* margin-right: 80px; */
   font-weight: 600;
 }
 
 #ok p {
-  position: absolute;
-  margin-top: 1em;
-  margin-left: 2.7em;
+  /* position: absolute; */
+
   font-size: 30px;
   font-weight: 200;
   color: whitesmoke;
 }
 #ko p {
   text-align: right;
-  margin-right: 2.7em;
+
   font-size: 30px;
   color: whitesmoke;
 }
-
+#ok span {
+  margin-right: 5px;
+}
+#ko span {
+  margin-right: 5px;
+}
+footer {
+  margin-top: 300px;
+}
 footer button {
   display: block;
   margin-top: 12em;
