@@ -51,7 +51,7 @@ function goToNextQuestion() {
     quizContainer.innerHTML = "<h2>Quiz completato!</h2>"; // mostra quiz completato quando terminato
 
     const endBtn = document.createElement("a");
-    endBtn.href = "#"; // aggiornare con link pagina
+    endBtn.href = "results.html"; // aggiornare con link pagina
     endBtn.textContent = "Next";
     endBtn.className = "end-button";
     quizContainer.appendChild(endBtn);
@@ -61,7 +61,7 @@ function goToNextQuestion() {
     counter.style.display = "none"; // nasconde il contatore
   }
 }
-
+ 
 function renderQuestion(index) {
   // crea una nuova domanda
   quizContainer.innerHTML = ""; // svuota il contenuto precedente
