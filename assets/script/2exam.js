@@ -1,14 +1,43 @@
 const questionsData = [
-  ["Domanda 1", ["risposta 0", "risposta 1", "risposta 2", "risposta 3"]],
-  ["Domanda 2", ["risposta 4", "risposta 5", "risposta 6", "risposta 7"]],
-  ["Domanda 3", ["risposta 8", "risposta 9", "risposta 10", "risposta 11"]],
-  ["Domanda 4", ["risposta 12", "risposta 13", "risposta 14", "risposta 15"]],
-  ["Domanda 5", ["risposta 16", "risposta 17", "risposta 18", "risposta 19"]],
-  ["Domanda 6", ["risposta 20", "risposta 21", "risposta 22", "risposta 23"]],
-  ["Domanda 7", ["risposta 24", "risposta 25", "risposta 26", "risposta 27"]],
-  ["Domanda 8", ["risposta 28", "risposta 29", "risposta 30", "risposta 31"]],
-  ["Domanda 9", ["risposta 32", "risposta 33", "risposta 34", "risposta 35"]],
-  ["Domanda 10", ["risposta 36", "risposta 37", "risposta 38", "risposta 39"]],
+  [
+    "Chi è il portatore originale dell'Anello all'inizio della saga?",
+    ["Bilbo Baggins", "Gollum", "Frodo Baggins", "Samwise Gamgee"],
+  ],
+  [
+    "Come si chiama la spada riforgiata per Aragorn?",
+    ["Andúril", "Sting", "Orcrist", "Glamdring"],
+  ],
+  [
+    "Quale creatura salva Frodo e Sam dal Monte Fato?",
+    ["Le aquile giganti", "Gandalf su un'aquila", "Gollum", "Legolas e Gimli"],
+  ],
+  [
+    "Chi è il re di Rohan durante la Guerra dell'Anello?",
+    ["Théoden", "Éomer", "Boromir", "Denethor"],
+  ],
+  ["Qual è il vero nome di Gollum?", ["Sméagol", "Déagol", "Gríma", "Saruman"]],
+  [
+    "Quale dei seguenti non è uno degli Anelli del Potere?",
+    ["Morgul", "Narya", "Nenya", "Vilya"],
+  ],
+  [
+    "Dove si trova la fortezza di Saruman?",
+    ["Isengard", "Gondor", "Moria", "Minas Tirith"],
+  ],
+  [
+    "Chi uccide il Re Stregone di Angmar?",
+    ["Éowyn", "Aragorn", "Frodo", "Gandalf"],
+  ],
+  ["Qual è la razza di Legolas?", ["Elfo", "Umano", "Nano", "Hobbit"]],
+  [
+    "Dove viene forgiato l’Unico Anello?",
+    [
+      "Mordor, nel Monte Fato",
+      " Mordor, a Minas Morgul",
+      "Gondor, a Osgiliath",
+      "Eregion",
+    ],
+  ],
 ];
 
 let currentQuestionIndex = 0;
