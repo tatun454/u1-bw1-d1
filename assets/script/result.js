@@ -33,3 +33,19 @@ const myChart = new Chart("myChart", {
   type: "doughnut",
   data,
 });
+
+//costanti per classe hide
+const passedMessage = document.getElementById("passed");
+const notPassedMessage = document.getElementById("not");
+const certificateMessage = document.getElementById("certificate");
+
+if (userPassed) {
+  passedMessage.classList.remove("hide");
+  certificateMessage.classList.remove("hide");
+  notPassedMessage.classList.add("hide");
+} else {
+  notPassedMessage.classList.remove("hide");
+  passedMessage.classList.add("hide");
+  certificateMessage.classList.add("hide");
+}
+// non saprei come collegarlo

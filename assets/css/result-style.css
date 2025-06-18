@@ -29,42 +29,58 @@ p {
 }
 #donut {
   position: relative;
-}
-#passed {
-  color: whitesmoke;
-  margin-top: -13em;
-  text-align: center;
-  position: absolute;
-  margin-left: 32.8em;
-  font-size: 1.6em;
-}
-#passed span {
-  color: #00ffff;
-}
-#not {
-  color: #d20094;
-  font-size: 1.5em;
-  margin-top: -11em;
-  text-align: center;
-  position: absolute;
-  margin-left: 33.7em;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #myChart {
   margin-left: auto;
   margin-right: auto;
-  margin-top: 1em;
   pointer-events: none;
-  position: relative;
+  display: block;
+}
+
+#passed,
+#not,
+#certificate {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  text-align: center;
+  margin: 0;
+}
+
+#passed {
+  color: whitesmoke;
+  font-size: 1.6em;
+  top: 40%;
+}
+#passed span {
+  color: #00ffff;
+  display: block;
+  font-size: 1.2em;
+  margin-top: 5px;
+}
+
+#not {
+  color: #d20094;
+  font-size: 1.5em;
+}
+#not span {
+  display: block;
+  font-size: 1.2em;
+  margin-top: 5px;
 }
 
 #certificate {
-  margin-top: -16em;
-  text-align: center;
-  position: absolute;
-  margin-left: 54em;
+  font-size: 0.9em;
+  line-height: 1.4;
+  padding-top: 110px;
+  color: rgb(180, 180, 180);
+  width: 80%;
 }
-
 #ok {
   position: absolute;
   left: 0;
@@ -133,11 +149,11 @@ p {
   margin-right: 5px;
 }
 footer {
-  margin-top: 300px;
+  margin-top: 55px;
 }
 footer button {
   display: block;
-  margin-top: 12em;
+
   margin-left: auto;
   margin-right: auto;
   border: solid 2px whitesmoke;
