@@ -31,10 +31,23 @@ p {
   position: relative;
 }
 #passed {
+  color: whitesmoke;
+  margin-top: -13em;
+  text-align: center;
+  position: absolute;
+  margin-left: 32.8em;
+  font-size: 1.6em;
+}
+#passed span {
+  color: #00ffff;
 }
 #not {
   color: #d20094;
   font-size: 1.5em;
+  margin-top: -11em;
+  text-align: center;
+  position: absolute;
+  margin-left: 33.7em;
 }
 
 #myChart {
@@ -46,8 +59,10 @@ p {
 }
 
 #certificate {
-  margin-top: 9em;
+  margin-top: -16em;
   text-align: center;
+  position: absolute;
+  margin-left: 54em;
 }
 
 #ok {
