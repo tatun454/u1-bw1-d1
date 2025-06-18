@@ -24,6 +24,7 @@ const data = {
       data: [sbagliate.valore, giuste.valore],
       backgroundColor: [sbagliate.colore, giuste.colore],
       borderWidth: 0,
+      cutout: `70%`,
     },
   ],
 };

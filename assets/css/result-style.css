@@ -27,6 +27,14 @@ p {
   font-weight: 250;
   margin-top: 10px;
 }
+
+#myChart {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1em;
+  pointer-events: none;
+}
+
 #certificate {
   margin-top: 9em;
   text-align: center;
@@ -131,4 +139,7 @@ footer button a {
 }
 footer button:hover {
   border: solid 2px #00ffff;
+}
+.hide {
+  display: none;
 }
