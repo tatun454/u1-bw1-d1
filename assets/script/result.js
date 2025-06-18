@@ -35,6 +35,7 @@ const myChart = new Chart("myChart", {
 });
 
 //costanti per classe hide
+// non saprei come collegarlo
 const passedMessage = document.getElementById("passed");
 const notPassedMessage = document.getElementById("not");
 const certificateMessage = document.getElementById("certificate");
@@ -48,4 +49,3 @@ if (userPassed) {
   passedMessage.classList.add("hide");
   certificateMessage.classList.add("hide");
 }
-// non saprei come collegarlo
