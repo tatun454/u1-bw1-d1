@@ -108,3 +108,16 @@ input[type="checkbox"] {
   color: #f9f8fa;
   line-height: 12px;
 }
+
+.bottoneAttivo {
+  margin-left: 30em;
+  color: #0b113b;
+  background-color: #00ffff;
+  text-transform: uppercase;
+  padding: 11px 37px;
+  font-weight: 800;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 0 6px #00ffff, 0 0 1px #00ffff, 0 0 15px #00ffff;
+  font-family: "Outfit", sans-serif;
+}
