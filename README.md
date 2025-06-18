@@ -1,14 +1,24 @@
 # u1-bw1-d1
 
+---AGGIORNAMENTO DEL 18/06/2025 delle 04:00
 
---- FEEDBACK PAGE
+-fix & change ai file:
 
-    + feedback.html
-        aggiornamento della star svg.
-    
-    + style_fb.css
-        file base aggiunto.
+- |2exam.html
+  |2exam.css
+  |2exam.js add timer
 
-    + feedback.js
-        completato. (se avete dubbi scrivetemi)
+- result.js
+  placeholder grafico con score
 
+---
+
+-piccoli fix
+
+- welcome.css
+  background
+  grandezza
+- style_fb.css
+  stelline contorno
+  input text nero
+  bottone-sfocato

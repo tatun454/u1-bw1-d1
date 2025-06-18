@@ -100,3 +100,107 @@ button {
   /* questo serve a delineare la forma delle stelline */
   text-shadow: #02feff 0px 0px 2px;
 }
+
+body {
+  text-align: center;
+  background-image: url("/assets/imgs/bg.jpg");
+
+  background-size: cover;
+}
+
+main {
+  margin-top: 5em;
+  width: 50%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+img {
+  width: 180px;
+  margin-top: 2em;
+  margin-left: 4em;
+  margin-right: auto;
+  display: block;
+}
+
+h1 {
+  font-size: 3.5em;
+  color: rgb(225, 222, 222);
+  font-family: "Outfit", sans-serif;
+  margin-bottom: 0.2em;
+}
+p {
+  color: rgb(225, 222, 222);
+  font-size: 1.7rem;
+  margin-bottom: 0.2em;
+  font-family: "Inter", sans-serif;
+}
+span {
+  justify-content: center;
+  display: flex;
+  color: #000000;
+  font-size: 4rem;
+  margin-top: 0.1em;
+  margin-bottom: 1em;
+}
+
+span {
+  justify-content: center;
+  display: flex;
+  color: #0c1139;
+  font-size: 4rem;
+}
+
+.star.active {
+  color: #02feff;
+  font-size: 4rem;
+}
+
+div p {
+  margin-top: 1em;
+  margin-bottom: 1em;
+  font-family: "Inter", sans-serif;
+}
+
+input {
+  margin-top: 0.5em;
+  width: 700px;
+  height: 40px;
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+  padding: 8px;
+  border: none;
+  border-bottom: 2px solid #e505d6;
+  background-color: transparent;
+  padding-bottom: 0.2em;
+  padding-left: 1.5em;
+  font-size: 1em;
+  margin-bottom: 2em;
+  /* per rendere il colore delle scrittte nella casella bianche */
+  color: white;
+}
+
+footer {
+  text-align: center;
+  width: 50%;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 1em;
+}
+button {
+  width: 30%;
+  height: 2.5em;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1.5em;
+
+  background-color: #02feff;
+  font-family: "Inter", sans-serif;
+  border: none;
+  /* box-shadow: 0px 0px 15px 10px #02feff; questa portava a una perdita visiva del bordo del bottone, vedi tu quale versione preferisci */
+  box-shadow: 0px 0px 20px #02feff;
+}
+.star {
+  /* questo serve a delineare la forma delle stelline */
+  text-shadow: #02feff 0px 0px 2px;
+}

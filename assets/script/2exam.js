@@ -1,20 +1,52 @@
 const questionsData = [
-  ["Domanda 1", ["risposta 1", "risposta 2", "risposta 3", "risposta 4"]],
-  ["Domanda 2", ["risposta 4", "risposta 5", "risposta 6", "risposta 7"]],
-  ["Domanda 3", ["risposta 8", "risposta 9", "risposta 10", "risposta 11"]],
-  ["Domanda 4", ["risposta 12", "risposta 13", "risposta 14", "risposta 15"]],
-  ["Domanda 5", ["risposta 16", "risposta 17", "risposta 18", "risposta 19"]],
-  ["Domanda 6", ["risposta 20", "risposta 21", "risposta 22", "risposta 23"]],
-  ["Domanda 7", ["risposta 24", "risposta 25", "risposta 26", "risposta 27"]],
-  ["Domanda 8", ["risposta 28", "risposta 29", "risposta 30", "risposta 31"]],
-  ["Domanda 9", ["risposta 32", "risposta 33", "risposta 34", "risposta 35"]],
-  ["Domanda 10", ["risposta 36", "risposta 37", "risposta 38", "risposta 39"]],
+  [
+    "Chi è il portatore originale dell'Anello all'inizio della saga?",
+    ["Bilbo Baggins", "Gollum", "Frodo Baggins", "Samwise Gamgee"],
+  ],
+  [
+    "Come si chiama la spada riforgiata per Aragorn?",
+    ["Andúril", "Sting", "Orcrist", "Glamdring"],
+  ],
+  [
+    "Quale creatura salva Frodo e Sam dal Monte Fato?",
+    ["Le aquile giganti", "Gandalf su un'aquila", "Gollum", "Legolas e Gimli"],
+  ],
+  [
+    "Chi è il re di Rohan durante la Guerra dell'Anello?",
+    ["Théoden", "Éomer", "Boromir", "Denethor"],
+  ],
+  ["Qual è il vero nome di Gollum?", ["Sméagol", "Déagol", "Gríma", "Saruman"]],
+  [
+    "Quale dei seguenti non è uno degli Anelli del Potere?",
+    ["Morgul", "Narya", "Nenya", "Vilya"],
+  ],
+  [
+    "Dove si trova la fortezza di Saruman?",
+    ["Isengard", "Gondor", "Moria", "Minas Tirith"],
+  ],
+  [
+    "Chi uccide il Re Stregone di Angmar?",
+    ["Éowyn", "Aragorn", "Frodo", "Gandalf"],
+  ],
+  ["Qual è la razza di Legolas?", ["Elfo", "Umano", "Nano", "Hobbit"]],
+  [
+    "Dove viene forgiato l’Unico Anello?",
+    [
+      "Mordor, nel Monte Fato",
+      " Mordor, a Minas Morgul",
+      "Gondor, a Osgiliath",
+      "Eregion",
+    ],
+  ],
 ];
 
 let currentQuestionIndex = 0;
 let timer;
 let timeLeft = 60; // secondi
-const timerDisplay = document.getElementById("timer");
+let checkedAnswer;
+let score = 0;
+
+// const timerDisplay = document.getElementById("timer");
 
 const quizContainer = document.getElementById("quiz");
 // seleziono il div dove verrà inserita la domanda
@@ -27,11 +59,24 @@ const counter = document.getElementById("counter");
 function startTimer() {
   clearInterval(timer); // Ferma eventuali timer precedenti
   timeLeft = 60;
-  timerDisplay.textContent = `Tempo: ${timeLeft}s`;
+  // timerDisplay.textContent = `Tempo: ${timeLeft}s`; ho modificato il timer perciò ho lasciato la riga commentata
+  totalTime = 60;
+
+  const FULL_DASH_ARRAY = 2 * Math.PI * 52;
+  const circle = document.querySelector(".progress-ring__circle");
+  circle.style.strokeDasharray = FULL_DASH_ARRAY;
+
+  function setProgress(time) {
+    const offset = FULL_DASH_ARRAY - (time / totalTime) * FULL_DASH_ARRAY;
+    circle.style.strokeDashoffset = offset;
+    document.getElementById("timer-value").textContent = time;
+  }
+
+  setProgress(timeLeft);
 
   timer = setInterval(() => {
     timeLeft--;
-    timerDisplay.textContent = `Tempo: ${timeLeft}s`;
+    setProgress(timeLeft);
 
     if (timeLeft <= 0) {
       clearInterval(timer);
@@ -40,8 +85,19 @@ function startTimer() {
   }, 1000);
 }
 
+timer = setInterval(() => {
+  timeLeft--;
+  timerDisplay.textContent = `Tempo: ${timeLeft}s`;
+
+  if (timeLeft <= 0) {
+    clearInterval(timer);
+    goToNextQuestion(); // passa alla prossima domanda se il tempo scade
+  }
+}, 1000);
+
 // funzione per passare alla prossima domanda
 function goToNextQuestion() {
+  checkedAnswer = null;
   currentQuestionIndex++;
   clearInterval(timer); // Ferma il timer corrente
 
@@ -51,7 +107,7 @@ function goToNextQuestion() {
     quizContainer.innerHTML = "<h2>Quiz completato!</h2>"; // mostra quiz completato quando terminato
 
     const endBtn = document.createElement("a");
-    endBtn.href = "#"; // aggiornare con link pagina
+    endBtn.href = "results.html"; // aggiornare con link pagina
     endBtn.textContent = "Next";
     endBtn.className = "end-button";
     quizContainer.appendChild(endBtn);
@@ -60,6 +116,20 @@ function goToNextQuestion() {
     timerDisplay.style.display = "none"; // nasconde il timer
     counter.style.display = "none"; // nasconde il contatore
   }
+}
+
+function RandomizeAnswers(text) {
+  let aux;
+
+  text.forEach((t, index) => {
+    let index2 = 0;
+    aux = t;
+    index2 = Math.floor(Math.random() * 4);
+    text[index] = text[index2];
+    text[index2] = aux;
+  });
+
+  return text;
 }
 
 function renderQuestion(index) {
@@ -77,7 +147,9 @@ function renderQuestion(index) {
   const answerContainer = document.createElement("div");
   answerContainer.className = "answerContainer"; // crea contenitore per risposte
 
-  answers.forEach((text) => {
+  let randText = RandomizeAnswers(Array.from(answers));
+
+  randText.forEach((text) => {
     const label = document.createElement("label"); // creo un label per ogni elemento con classe answer
     label.className = "answer";
 
@@ -110,10 +182,10 @@ function renderQuestion(index) {
       }
 
       // Abilita il pulsante "Avanti" se almeno una è selezionata
-      const anyChecked = answerContainer.querySelector(
+      checkedAnswer = answerContainer.querySelector(
         "input[type='checkbox']:checked"
       );
-      nextBtn.disabled = !anyChecked;
+      nextBtn.disabled = !checkedAnswer;
     });
   });
 
@@ -126,6 +198,17 @@ function renderQuestion(index) {
   startTimer(); // avvia il timer per questa domanda
 }
 
-nextBtn.addEventListener("click", goToNextQuestion);
+nextBtn.addEventListener("click", () => {
+  console.log(questionsData[currentQuestionIndex][1][0]);
+  if (
+    checkedAnswer.closest(".answer").children[1].textContent ==
+    questionsData[currentQuestionIndex][1][0]
+  ) {
+    ++score;
+    localStorage.setItem("score", score);
+  }
+
+  goToNextQuestion();
+});
 
 renderQuestion(currentQuestionIndex); // quando carica la pagina mostra la prima domanda
