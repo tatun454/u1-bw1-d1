@@ -37,32 +37,34 @@
         <h1>Results</h1>
         <h3>The summary of your answers:</h3>
       </div>
-      <div>
+      <div id="donut">
         <canvas id="myChart" style="width: 100%; max-width: 500px" ;></canvas>
-        <p><span></span></p>
-        <p id="certificate">
+        <p id="passed">Congratulations!<span>You passed the exam</span></p>
+        <p id="not">Opss!<span>You didn't pass the exam</span></p>
+      </div>
+      <div id="certificate">
+        <p>
           we'll send you the certificate <br />
           in few minutes. <br />
           Chek your email (including <br />
           promotions / spam folder )
         </p>
       </div>
-      <div class="percentuali">
-        <aside id="ok">
-          <div>
-            <h2>Correct</h2>
-            <h3 id="correct">67.7%</h3>
-            <p><span id="c-questions">4/6</span>questions</p>
-          </div>
-        </aside>
-        <aside id="ko">
-          <div>
-            <h2>Wrong</h2>
-            <h3 id="wrong">33.3%</h3>
-            <p><span id="w-questions">2/6</span>questions</p>
-          </div>
-        </aside>
-      </div>
+
+      <aside id="ok">
+        <div>
+          <h2>Correct</h2>
+          <h3 id="correct">67.7%</h3>
+          <p><span id="c-questions">4/6</span>questions</p>
+        </div>
+      </aside>
+      <aside id="ko">
+        <div>
+          <h2>Wrong</h2>
+          <h3 id="wrong">33.3%</h3>
+          <p><span id="w-questions">2/6</span>questions</p>
+        </div>
+      </aside>
     </main>
     <footer>
       <button><a href="feedback-page.html">RATE US</a></button>
