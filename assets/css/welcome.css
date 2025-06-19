@@ -76,7 +76,7 @@ label {
 }
 
 button {
-  opacity: 0.5;
+  /* opacity: 0.5; ho sistemato il bottone come lo volevi tu, l'opacità non serve più */
   /* display: none; */
   margin-left: 30em;
   color: #0b113b;
@@ -109,6 +109,11 @@ input[type="checkbox"] {
   line-height: 12px;
 }
 
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  box-shadow: none;
+}
 .bottoneAttivo {
   margin-left: 30em;
   color: #0b113b;
