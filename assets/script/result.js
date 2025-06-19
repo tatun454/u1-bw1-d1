@@ -7,22 +7,25 @@
 // const sbagliate = {
 //   valore: 40,
 //   colore: `#D20094`,
-// }; questo è il codice che hai fatto tu, io l'ho modificato facendo un localstorage in 2exam.js e collegandolo qua ma non è praticamente solo un placeholder per il momento
-const score = localStorage.getItem("score");
+// }; questo è il codice che hai fatto tu, io l'ho modificato facendo un localstorage in 2exam.js e collegandolo qua, ore è del tutto sistemato
+const score = Number(localStorage.getItem("score")) || 0;
+const totalQuestions = 10;
+const percent = Math.round((score / totalQuestions) * 100);
+
 const giuste = {
-  valore: Number(score),
+  valore: percent,
   colore: `#00FFFF`,
 };
 const sbagliate = {
-  valore: 100 - Number(score),
+  valore: 100 - percent,
   colore: `#D20094`,
 };
 
 const data = {
   datasets: [
     {
-      data: [sbagliate.valore, giuste.valore],
-      backgroundColor: [sbagliate.colore, giuste.colore],
+      data: [giuste.valore, sbagliate.valore],
+      backgroundColor: [giuste.colore, sbagliate.colore],
       borderWidth: 0,
       cutout: `70%`,
     },
@@ -40,7 +43,7 @@ const passedMessage = document.getElementById("passed");
 const notPassedMessage = document.getElementById("not");
 const certificateMessage = document.getElementById("certificate");
 
-if (userPassed) {
+if (percent >= 60) {
   passedMessage.classList.remove("hide");
   certificateMessage.classList.remove("hide");
   notPassedMessage.classList.add("hide");
@@ -49,3 +52,15 @@ if (userPassed) {
   passedMessage.classList.add("hide");
   certificateMessage.classList.add("hide");
 }
+<<<<<<< HEAD
+=======
+
+document.getElementById("correct").textContent = percent + "%";
+document.getElementById("wrong").textContent = 100 - percent + "%";
+document.getElementById(
+  "c-questions"
+).textContent = `${score}/${totalQuestions}`;
+document.getElementById("w-questions").textContent = `${
+  totalQuestions - score
+}/${totalQuestions}`;
+>>>>>>> 983fe4732a251724c57e56c8681cd7ad8f6dc753
