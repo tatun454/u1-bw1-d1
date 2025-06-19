@@ -52,8 +52,6 @@ if (percent >= 60) {
   passedMessage.classList.add("hide");
   certificateMessage.classList.add("hide");
 }
-<<<<<<< HEAD
-=======
 
 document.getElementById("correct").textContent = percent + "%";
 document.getElementById("wrong").textContent = 100 - percent + "%";
@@ -63,4 +61,3 @@ document.getElementById(
 document.getElementById("w-questions").textContent = `${
   totalQuestions - score
 }/${totalQuestions}`;
->>>>>>> 983fe4732a251724c57e56c8681cd7ad8f6dc753
