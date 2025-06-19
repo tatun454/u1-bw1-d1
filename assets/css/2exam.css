@@ -67,6 +67,7 @@ main {
 main h2 {
   color: aliceblue;
   font-family: "outfit", sans-serif;
+  font-size: 30px;
 }
 
 main label {

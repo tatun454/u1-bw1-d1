@@ -76,8 +76,6 @@ label {
 }
 
 button {
-  /* opacity: 0.5; ho sistemato il bottone come lo volevi tu, l'opacità non serve più */
-  /* display: none; */
   margin-left: 30em;
   color: #0b113b;
   background-color: #00ffff;
@@ -85,7 +83,6 @@ button {
   padding: 11px 37px;
   font-weight: 800;
   border: none;
-  /* cursor: pointer; */
   box-shadow: 0 0 6px #00ffff, 0 0 1px #00ffff, 0 0 15px #00ffff;
   font-family: "Outfit", sans-serif;
 }

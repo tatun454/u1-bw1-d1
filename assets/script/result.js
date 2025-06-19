@@ -1,13 +1,4 @@
-// da capire come recuperare le percentuali queryparams/ local storage
-
-// const giuste = {
-//   valore: 60,
-//   colore: `#00FFFF`,
-// };
-// const sbagliate = {
-//   valore: 40,
-//   colore: `#D20094`,
-// }; questo è il codice che hai fatto tu, io l'ho modificato facendo un localstorage in 2exam.js e collegandolo qua, ore è del tutto sistemato
+// localstorage in 2exam.js e collegato qua
 const score = Number(localStorage.getItem("score")) || 0;
 const totalQuestions = 10;
 const percent = Math.round((score / totalQuestions) * 100);
@@ -38,7 +29,7 @@ const myChart = new Chart("myChart", {
 });
 
 //costanti per classe hide
-// non saprei come collegarlo
+
 const passedMessage = document.getElementById("passed");
 const notPassedMessage = document.getElementById("not");
 const certificateMessage = document.getElementById("certificate");

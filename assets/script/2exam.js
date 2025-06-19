@@ -46,8 +46,6 @@ let timeLeft = 60; // secondi
 let checkedAnswer;
 let score = 0;
 
-// const timerDisplay = document.getElementById("timer");
-
 const quizContainer = document.getElementById("quiz");
 // seleziono il div dove verrà inserita la domanda
 const nextBtn = document.getElementById("nextBtn");
@@ -59,7 +57,7 @@ const counter = document.getElementById("counter");
 function startTimer() {
   clearInterval(timer); // Ferma eventuali timer precedenti
   timeLeft = 60;
-  // timerDisplay.textContent = `Tempo: ${timeLeft}s`; ho modificato il timer perciò ho lasciato la riga commentata
+
   totalTime = 60;
 
   const FULL_DASH_ARRAY = 2 * Math.PI * 52;
