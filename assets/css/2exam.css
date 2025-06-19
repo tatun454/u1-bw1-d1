@@ -5,6 +5,7 @@ body {
   background-position: center center;
   background-attachment: fixed;
   padding: 5em;
+  font-family: "Inter", sans-serif;
 }
 
 main {
@@ -130,8 +131,7 @@ main label {
   opacity: 0.7;
 }
 
-
-#container-container{
+#container-container {
   display: flex;
   justify-content: end;
 }
